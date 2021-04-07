@@ -1,0 +1,147 @@
+.footer {
+  &-top {
+    padding: 7.5rem 0 7rem;
+    @include flexBox(stretch, space-between);
+  }
+  &-column {
+    width: calc(35% - 25px);
+    &:first-child {
+      width: calc(40% - 25px);
+    }
+    &:last-child {
+      width: calc(25% - 25px);
+    }
+  }
+  &-heading {
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 4rem;
+    margin-bottom: 2rem;
+    &--logo {
+      text-transform: none;
+      font-size: 4.6rem;
+      font-weight: bold;
+      color: $gray-dark-color;
+    }
+  }
+  &-desc {
+    font-style: normal;
+    margin-bottom: 4.5rem;
+    margin-top: 2rem;
+  }
+  &-follower {
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid $border-color;
+    strong {
+      font-weight: bold;
+      font-size: 1.8rem;
+    }
+  }
+  &-social {
+    @include flexBox(center);
+    margin-bottom: 3.5rem;
+  }
+  &-social-icon {
+    color: $third-color;
+    margin-left: 1.5rem;
+    font-size: 2rem;
+  }
+  &-form {
+    width: 100%;
+    max-width: 38rem;
+    @include flexBox();
+  }
+  &-form-input {
+    width: 100%;
+    padding: 1.5rem;
+    background: #fff;
+    border: 1px solid $border-color;
+    border-right: 0;
+    font-family: $secondary-font;
+    font-size: 1.5rem;
+    font-style: italic;
+    border-radius: 0;
+  }
+  &-form-button {
+    color: #fff;
+    text-transform: uppercase;
+    padding: 1.5rem 3.5rem;
+    border: 0;
+    background: $third-color;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border-radius: 0;
+  }
+  &-blog {
+    @include flexBox(center);
+    margin-bottom: 3rem;
+  }
+  &-blog-image {
+    @include size(12rem, 8rem);
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  &-blog-info {
+    padding-left: 2rem;
+  }
+  &-blog-title {
+    @include textClamp(2);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    font-weight: 500;
+    color: $title-color;
+  }
+  &-images {
+    @include flexBox(stretch, flex-start, row, flex, wrap);
+    margin-left: -2px;
+    margin-bottom: 2rem;
+  }
+  &-image {
+  width: calc(33.33% - 2px);
+  margin-left: 2px;
+  margin-bottom: 2px;
+  padding-bottom: 33.33%;
+  height: 0;
+  position: relative;
+    img {
+      @include size(100%);
+      position: absolute;
+      object-fit: cover;
+      top: 0;
+      left: 0;
+    }
+  }
+  &-bottom {
+    padding: 2.5rem 0;
+    text-align: center;
+    border-top: 1px solid $border-color;
+    span {
+      color: $primary-color;
+    }
+  }
+  &-images-more {
+    color: $title-color;
+  }
+  @include maxWidth(1023px) {
+    &-top {
+      display: block;
+      padding-bottom: 3rem;
+    }
+    &-column:not(:nth-child(99)) {
+      width: 100%;
+      margin-bottom: 3rem;
+    }
+    &-column:last-child {
+      margin-bottom: 0;
+    }
+  }
+  @include maxWidth(479px) {
+    &-form-button {
+      padding: 1.5rem;
+    }
+  }
+}

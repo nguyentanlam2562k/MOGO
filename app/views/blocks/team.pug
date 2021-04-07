@@ -1,0 +1,14 @@
+section.team 
+  .container 
+    +blockBox('Who we are', 'Meet out team', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.')
+    .team-list 
+      +teamItem('./images/img-team1.png', 'Christopher Cambell', 'Branding/UX team.team-list')
+        +teamSocial('#')
+      +teamItem('./images/img-team2.png', 'Matthew dix', 'Graphic design')
+        +teamSocial('#')
+      +teamItem('./images/img-team3.png', 'Evon dev', 'Junior frontend')
+        +teamSocial('#')
+
+section.brand 
+  .container 
+    img(src='./images/img-logos.png')

@@ -1,0 +1,59 @@
+.about {
+  padding-top: 9.3rem;
+  padding-bottom: 11rem;
+  background-color: #fff;
+
+  &-list {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-left: -3rem;
+  }
+
+  &-item {
+    width: calc(33.33% - 3rem);
+    margin-left: 3rem;
+
+  }
+
+  &-content {
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  &-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  &-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1.4;
+    @include textClamp();
+  }
+
+  @include maxWidth(767px) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    &-list {
+      margin-left: unset;
+      overflow-x: auto;
+      padding: 1rem;
+      @include hideScroll();
+      scroll-snap-type: x mandatory;
+      scroll-snap-stop: always;
+
+    }
+
+    &-item {
+      min-width: 80%;
+      scroll-snap-align: start;
+    }
+  }
+
+}
+
+@include hoverEffect('.about-item', '.about-content');
